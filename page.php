@@ -8,7 +8,7 @@
       <?php the_post_thumbnail('page-image'); ?>
     </figure>
     <?php endif; ?>
-    <h1><?php the_title(); ?></h1>
+<?php if (!is_front_page()): ?><h1><?php the_title(); ?></h1><?php endif; ?>
       <?php while (have_posts()) : the_post();
         the_content();
       endwhile; ?>

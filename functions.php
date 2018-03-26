@@ -17,6 +17,59 @@
   }
   add_action('after_setup_theme','init_theme_support');
 
+  function init_widgets() {
+    register_sidebar(array(
+      'name'=>__('Sidebar Widget 1'),
+      'id'=>'sidebar1',
+      'description'=>__('Widget above sidebar menu.'),
+      'before_widget'=>'',
+      'after_widget'=>'',
+      'before_title'=>'<h3>',
+      'after_title'=>'</h3>',
+    ));
+
+    register_sidebar(array(
+      'name'=>__('Sidebar Widget 2'),
+      'id'=>'sidebar2',
+      'description'=>__('Widget below sidebar menu.'),
+      'before_widget'=>'',
+      'after_widget'=>'',
+      'before_title'=>'<h3>',
+      'after_title'=>'</h3>',
+    ));
+
+    register_sidebar(array(
+      'name'=>__('Footer Widget 1'),
+      'id'=>'footer1',
+      'description'=>__('First widget in footer.'),
+      'before_widget'=>'',
+      'after_widget'=>'',
+      'before_title'=>'<h3>',
+      'after_title'=>'</h3>',
+    ));
+
+    register_sidebar(array(
+      'name'=>__('Footer Widget 2'),
+      'id'=>'footer2',
+      'description'=>__('Second Widget in footer.'),
+      'before_widget'=>'',
+      'after_widget'=>'',
+      'before_title'=>'<h3>',
+      'after_title'=>'</h3>',
+    ));
+
+    register_sidebar(array(
+      'name'=>__('Footer Widget 3'),
+      'id'=>'footer3',
+      'description'=>__('Third widget in footer'),
+      'before_widget'=>'',
+      'after_widget'=>'',
+      'before_title'=>'<h3>',
+      'after_title'=>'</h3>',
+    ));
+  }
+  add_action('widgets_init','init_widgets');
+
   function new_excerpt_more($more) {
     return '...';
   }

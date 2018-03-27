@@ -17,7 +17,7 @@
       <?php endif; ?>
       <section class="preview-post-text">
       <h2>
-        <a href="javascript:void(0);"><?php the_title(); ?></a>
+        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </h2>
         <p>
           <?php echo get_the_excerpt(); ?>

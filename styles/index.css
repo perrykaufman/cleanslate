@@ -49,6 +49,11 @@ h1 {
   margin: 0;
 }
 
+h1.error {
+  text-align: center;
+  color: var(--tertiary-color);
+}
+
 h2,
 h2 a {
   color: var(--secondary-color) !important;
@@ -63,8 +68,24 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  color: var(--tertiary-color);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+h5, h6 {
+  color: var(--dark-color);
+  font-size: 1rem;
+  margin: 0;
+}
+
 p {
   margin: 0 0 10px 0;
+}
+
+p.error {
+  text-align: center;
 }
 
 figure {
@@ -265,6 +286,7 @@ a:hover {
 }
 
 .preview-post-image {
+  align-self: flex-start;
   flex: none;
   min-width: 250px;
   width: 33%;
@@ -337,12 +359,16 @@ a:hover {
   padding: 10px;
 }
 
+.footer-section>div {
+  margin: 5px 0 0 5px;
+}
+
 .footer-icons-list {
   display: flex;
   flex-flow: row nowrap;
   list-style: none;
   padding: 0;
-  margin: 5px 0 0 5px;
+  margin: 0;
 }
 
 .footer-icon {
@@ -360,10 +386,6 @@ a:hover {
 .footer-icon a img {
   width: 35px;
   height: 35px;
-}
-
-.footer-logo {
-  margin: 5px 0 0 5px;
 }
 
 .footer-logo a img,

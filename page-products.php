@@ -2,11 +2,12 @@
 <div class="page-body page-width">
 <?php get_sidebar() ?>
   <main class="page-content">
+    <?php get_search_form(); ?>
     <h1><?php the_title(); ?></h1>
     <?php
     $args = array('post_type'=>'post', 'post_status'=>'publish', 'category_name'=>'products', 'posts_per_page'=>-1);
     $query = new WP_Query($args);
-    while ($query->have_posts()) : $query->the_post();
+    if($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
     ?>
     <article class="content-preview-post">
       
@@ -27,7 +28,9 @@
         </p>
       </section>
     </article>
-    <?php endwhile; ?>
+    <?php endwhile; else: ?>
+    <h3 class="message">No products have been posted yet.</h3>
+    <?php endif; ?>
   </main>
 </div>
 <?php get_footer()?>

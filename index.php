@@ -6,7 +6,7 @@
       <?php if (is_front_page()) echo bloginfo('title');
       else echo get_the_title( get_option('page_for_posts', true) ); ?>
     </h1>
-    <?php while (have_posts()) : the_post(); ?>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <article class="content-preview-post">
       <?php if(has_post_thumbnail()): ?>
       <figure class="preview-post-image">
@@ -25,7 +25,9 @@
         </p>
       </section>
     </article>
-    <?php endwhile; ?>
+    <?php endwhile; else : ?>
+    <h3 class="message">No posts found.</h3>
+    <?php endif; ?>
   </main>
 </div>
 <?php get_footer()?>

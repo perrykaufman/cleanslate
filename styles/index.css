@@ -49,9 +49,10 @@ h1 {
   margin: 0;
 }
 
-h1.error {
-  text-align: center;
+h1.message {
   color: var(--tertiary-color);
+  margin-top: 25px;
+  text-align: center;
 }
 
 h2,
@@ -62,10 +63,22 @@ h2 a {
   text-decoration: none;
 }
 
+h2.message {
+  color: var(--tertiary-color);
+  margin-top: 25px;
+  text-align: center;
+}
+
 h3 {
   color: var(--secondary-color);
   font-size: 1.2rem;
   margin: 0;
+}
+
+h3.message {
+  color: var(--tertiary-color);
+  margin-top: 25px;
+  text-align: center;
 }
 
 h4 {
@@ -84,7 +97,7 @@ p {
   margin: 0 0 10px 0;
 }
 
-p.error {
+p.message {
   text-align: center;
 }
 
@@ -269,6 +282,58 @@ a:hover {
   width: 100%;
 }
 
+/* Search Form */
+.search-form {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: auto;
+  width: 80%;
+}
+
+.search-form-input {
+  border-radius: 5px;
+  border: 2px solid var(--gray-color);
+  flex: 1;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-right: 5px;
+  min-width: 0px;
+  padding: 2px 5px;
+  transition: border .5s;
+}
+
+.search-form-input:focus {
+  border: 2px solid var(--secondary-color);
+}
+
+.search-form-input:placeholder {
+  color: var(--gray-color);
+}
+
+.search-form-submit {
+  background-color: var(--light-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  color: var(--secondary-color);
+  font-family: inherit;
+  flex: none;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 2px 5px;
+
+}
+
+.search-form-submit:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+}
+
+.search-form-submit:active {
+  background-color: var(--secondary-color-active);
+  border: 2px solid var(--secondary-color-active);
+  color: var(--light-color);
+}
+
 /* Post Loop */
 .content-preview-post {
   align-items: center;
@@ -288,13 +353,13 @@ a:hover {
 .preview-post-image {
   align-self: flex-start;
   flex: none;
+  margin-right: 10px;
   min-width: 250px;
   width: 33%;
 }
 
 .preview-post-text {
   flex: 1;
-  padding-left: 10px;
 }
 
 /* Sidebar */
@@ -464,6 +529,11 @@ a:hover {
   }
   .footer-section {
     width: 100%;
+  }
+  .search-form {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 

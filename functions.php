@@ -10,7 +10,7 @@
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
 
-    add_image_size('preview-image', 600, 0, true);
+    add_image_size('preview-image', 600, 400, true);
     add_image_size('page-image', 900, 400, true);
 
     register_nav_menus(array('header_menu'=>'Header Menu', 'sidebar_menu'=>'Sidebar Menu'));

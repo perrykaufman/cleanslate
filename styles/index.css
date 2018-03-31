@@ -289,11 +289,16 @@ a:hover {
 }
 
 /* Search Form */
+
+.content-search-form {
+  margin: auto;
+  width: 80%;
+}
+
 .search-form {
   display: flex;
   flex-flow: row nowrap;
-  margin: auto;
-  width: 80%;
+  width: 100%;
 }
 
 .search-form-input {

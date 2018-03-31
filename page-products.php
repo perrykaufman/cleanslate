@@ -2,7 +2,9 @@
 <div class="page-body page-width">
 <?php get_sidebar() ?>
   <main class="page-content">
-    <?php get_search_form(); ?>
+    <div class="content-search-form">
+      <?php get_search_form(); ?>
+    </div>
     <h1><?php the_title(); ?></h1>
     <?php $args = array(
       'post_type'=>'post',

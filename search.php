@@ -2,8 +2,10 @@
 <div class="page-body page-width">
 <?php get_sidebar() ?>
   <main class="page-content">
-    <?php get_search_form(); ?>
-    <h1>Products Search</h1>
+    <div class="content-search-form">
+      <?php get_search_form(); ?>
+    </div>
+    <h1>Search</h1>
     <?php $args = array(
       'post_type'=>'post',
       'post_status'=>'publish',

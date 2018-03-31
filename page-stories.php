@@ -3,13 +3,14 @@
 <?php get_sidebar() ?>
   <main class="page-content">
     <h1><?php the_title(); ?></h1>
-    <?php
-    $args = array('post_type'=>'post', 'post_status'=>'publish', 'category_name'=>'stories', 'posts_per_page'=>-1);
+    <?php $args = array(
+      'post_type'=>'post',
+      'post_status'=>'publish',
+      'category_name'=>'stories',
+      'posts_per_page'=>-1);
     $query = new WP_Query($args);
-    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
-    ?>
+    if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
     <article class="content-preview-post">
-      
     <?php if(has_post_thumbnail()): ?>
       <figure class="preview-post-image">
         <a href="<?php the_permalink(); ?>">

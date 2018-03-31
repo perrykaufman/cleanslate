@@ -4,8 +4,13 @@
   <main class="page-content">
     <?php get_search_form(); ?>
     <h1>Products Search</h1>
-    <?php
-    $args = array('post_type'=>'post', 'post_status'=>'publish', 'category_name'=>'products', 'posts_per_page'=>-1, 's'=>get_query_var('s'));
+    <?php $args = array(
+      'post_type'=>'post',
+      'post_status'=>'publish',
+      'category_name'=>'products',
+      'posts_per_page'=>get_option('posts_per_page'),
+      'paged'=> get_query_var('paged'),
+      's'=>get_query_var('s'));
     $query = new WP_Query($args);
     if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
     ?>
@@ -28,7 +33,13 @@
         </p>
       </section>
     </article>
-    <?php endwhile; else :?>
+    <?php endwhile; ?>
+    <span class="page-links">
+      <?php echo paginate_links(array(
+        'total'=>$query->max_num_pages
+      )); ?>
+    </span>
+    <?php else :?>
     <h3 class="message">No matching products found.</h3>
     <?php endif; ?>
   </main>

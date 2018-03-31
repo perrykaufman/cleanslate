@@ -129,6 +129,12 @@ a:hover {
   text-decoration: none;
 }
 
+.page-links {
+  display: block;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
 /* Header */
 .page-header {
   align-items: flex-start;
@@ -299,7 +305,7 @@ a:hover {
   margin-right: 5px;
   min-width: 0px;
   padding: 2px 5px;
-  transition: border .5s;
+  transition: all ease-in-out .25s;
 }
 
 .search-form-input:focus {
@@ -320,7 +326,7 @@ a:hover {
   font-family: inherit;
   font-size: 1rem;
   padding: 2px 5px;
-
+  transition: all ease-in-out .25s;
 }
 
 .search-form-submit:hover {
@@ -367,6 +373,10 @@ a:hover {
   flex: none;
   padding: 0 10px 0 10px;
   width: 300px;
+}
+
+.sidebar-section div {
+  margin-left: 5px;
 }
 
 .sidebar-navigation ul {
@@ -416,11 +426,13 @@ a:hover {
 .footer-content {
   border-top: 3px solid var(--tertiary-color);
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   min-height: 200px;
 }
 
 .footer-section {
+  flex: none;
   padding: 10px;
 }
 

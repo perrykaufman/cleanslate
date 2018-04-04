@@ -3,13 +3,15 @@
 <?php get_sidebar() ?>
   <main class="page-content">
     <h1><?php the_title(); ?></h1>
-    <?php $args = array(
+    <?php //Get all Stories Post (no pagination)
+    $args = array(
       'post_type'=>'post',
       'post_status'=>'publish',
       'category_name'=>'stories',
       'posts_per_page'=>-1);
     $query = new WP_Query($args);
     if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
+      //Preview Post
       get_template_part('preview');
     endwhile; else:?>
     <h3 class="message">No stories have been posted yet.</h3>

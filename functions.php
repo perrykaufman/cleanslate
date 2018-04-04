@@ -1,6 +1,6 @@
 <?php
   function init_resources() {
-    wp_enqueue_style('style', get_stylesheet_uri());
+    //wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_style('index', get_template_directory_uri() . '/styles/index.css');
     wp_enqueue_script('index', get_template_directory_uri() . '/scripts/index.js');
   }

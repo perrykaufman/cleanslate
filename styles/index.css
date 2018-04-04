@@ -12,7 +12,7 @@ Colors
 */
 
 :root {
-  --dark-color: rgb(0, 0, 0);
+  --dark-color: rgba(0, 0, 0, 0.86);
   --gray-color: rgb(189, 189, 189);
   --light-color: rgb(255, 255, 255);
   --primary-color: rgb(119, 189, 67);

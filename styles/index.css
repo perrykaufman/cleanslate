@@ -34,7 +34,7 @@ body {
   background-color: var(--white-color);
   box-sizing: border-box;
   color: var(--dark-color);
-  font-size: 20px;
+  font-size: 22px;
   margin: 0 !important;
   min-height: 100vh;
   padding: 0;
@@ -671,6 +671,10 @@ Media Queries
 }
 
 @media all and (max-width: 600px) {
+  html,
+  body {
+    font-size: 20px;
+  }
   .content-preview-post {
     flex-flow: column nowrap;
   }

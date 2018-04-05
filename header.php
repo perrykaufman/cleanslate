@@ -13,7 +13,7 @@
     <div class="header-content page-width">
       <figure class="header-logo">
         <a href="<?php echo home_url() ?>">
-          <img src="<?php echo get_template_directory_uri() . '/images/cleanslate-logo.jpg' ?>" alt="Clean Slate Logo" />
+          <img src="<?php echo get_template_directory_uri() . '/images/cleanslate-logo.png' ?>" alt="Clean Slate Logo" />
         </a>
       </figure>
       <a id="header-navigation-menu-link" href="javascript:void(0);">

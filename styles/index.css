@@ -613,12 +613,14 @@ Media Queries
 */
 
 @media all and (max-width: 1200px) {
+  /* General */
   .page-width {
     width: 100%;
   }
 }
 
 @media all and (max-width: 1000px) {
+  /* General */
   .page-body {
     align-items: flex-end;
     align-content: flex-end;
@@ -629,12 +631,14 @@ Media Queries
     margin-bottom: 20px;
     width: 100%;
   }
+  /* Sidebar */
   .page-sidebar {
     flex: 1;
   }
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 780px) {
+  /* Header */
   .header-content {
     align-items: center;
     flex-flow: column nowrap;
@@ -667,33 +671,41 @@ Media Queries
     display: flex;
     flex-flow: row nowrap;
   }
-}
-
-@media all and (max-width: 600px) {
-  html,
-  body {
-    font-size: 20px;
-  }
+  /* Post Loop */
   .content-preview-post {
     flex-flow: column nowrap;
   }
   .preview-post-image {
+    align-self: flex-start;
+    margin: 0;
+    max-width: 600px;
     width: 100%;
   }
+}
+
+@media all and (max-width: 600px) {
+  /* General */
+  html,
+  body {
+    font-size: 20px;
+  }
+  /* Search Form */
+  .content-search-form {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /* Footer */
   .footer-content {
     flex-flow: column nowrap;
   }
   .footer-section {
     width: 100%;
   }
-  .content-search-form {
-    width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
 }
 
 @media all and (max-width: 400px) {
+  /* Sidebar */
   .page-sidebar {
     width: 100%;
   }

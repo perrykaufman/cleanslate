@@ -256,12 +256,13 @@ Header
 .header-navigation ul li {
   background-color: inherit;
   box-sizing: inherit;
-  min-width: 135px;
+  min-width: 100px;
 }
 
 .header-navigation ul li a {
   border-bottom: 0px solid var(--tertiary-color);
-  padding: 5px 0 0 10px;
+  padding: 5px 15px 0 15px;
+  text-align: center;
   transition: border-bottom .2s;
   width: 100%;
 }
@@ -510,7 +511,7 @@ Sidebar
   border-radius: 10px;
   box-shadow: 2px 2px 2px var(--gray-color);
   color: var(--light-color);
-  padding: 10px 20px;
+  padding: 5px 20px;
   transition: padding-left .2s;
 }
 

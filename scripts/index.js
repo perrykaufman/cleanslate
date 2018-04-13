@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function() {
   const headerMenuLabel = document.getElementById('header-menu-label')
 
   /* Media Queries */
-  const mobileMediaQueryString = '(max-width: 780px)'
+  const mobileMediaQueryString = '(max-width: 800px)'
 
   /* Menu Functions */
   function openMenu() {

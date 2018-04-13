@@ -754,6 +754,8 @@ Woocommerce
   border: 2px solid var(--gray-color);
   border-radius: 5px;
   color: var(--dark-color);
+  padding: 10px;
+  text-align: center;
   transition: all .18s ease-in-out;
 }
 
@@ -936,6 +938,10 @@ Media Queries
   .page-width {
     width: 100%;
   }
+  /* Header Navigation */
+  .header-navigation ul {
+    font-size: 1.3rem;
+  }
 }
 
 @media all and (max-width: 1000px) {
@@ -950,13 +956,23 @@ Media Queries
     margin-bottom: 20px;
     width: 100%;
   }
+  /* Header Navigation */
+  .header-navigation ul {
+    font-size: 1.3rem;
+  }
+  .header-navigation ul li {
+    min-width: 80px;
+  }
   /* Sidebar */
+  .sidebar-navigation ul {
+    font-size: 1.2rem;
+  }
   .page-sidebar {
     flex: 1;
   }
 }
 
-@media all and (max-width: 780px) {
+@media all and (max-width: 800px) {
   /* Header */
   .header-content {
     align-items: center;
@@ -980,10 +996,9 @@ Media Queries
   .header-navigation ul li {
     width: 100%;
   }
-  .header-navigation ul li a,
-  .header-navigation ul li a:hover,
-  .header-navigation ul li a:active {
+  .header-navigation ul li a {
     border-bottom: 2px solid var(--light-color) !important;
+    text-align: left;
   }
   #header-navigation-menu-link {
     align-self: flex-start;

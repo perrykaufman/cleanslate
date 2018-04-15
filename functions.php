@@ -87,4 +87,11 @@
   }
   //Override ellipsis for post excerpts.
   add_filter('excerpt_more', 'new_excerpt_more');
+
+  function add_menu_item_link_class($atts, $item, $args) {
+    $atts['class'] = 'menu-item-link';
+    return $atts;
+  }
+
+  add_filter('nav_menu_link_attributes','add_menu_item_link_class', 10, 3);
 ?>

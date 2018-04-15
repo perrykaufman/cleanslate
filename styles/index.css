@@ -331,7 +331,7 @@ Header
   font-weight: 500;
 }
 
-.header-navigation ul {
+.header-navigation .menu {
   align-items: flex-end;
   display: flex;
   flex-flow: row wrap;
@@ -340,35 +340,35 @@ Header
   padding: 0 0 0 10px;
 }
 
-.header-navigation ul li {
+.header-navigation .menu-item {
   background-color: inherit;
   box-sizing: inherit;
   min-width: 100px;
 }
 
-.header-navigation ul li a {
-  border-bottom: 0px solid var(--tertiary-color);
+.header-navigation .menu-item-link {
+  border-bottom: 0px solid var(--light-color);
   padding: 5px 15px 0 15px;
   text-align: center;
   transition: border-bottom .2s;
   width: 100%;
 }
 
-.header-navigation ul li a:hover,
-.header-navigation ul li a:active,
-.header-navigation ul li a:focus {
+.header-navigation .menu-item-link:hover,
+.header-navigation .menu-item-link:active,
+.header-navigation .menu-item-link:focus {
   background-color: inherit;
   border-bottom: 5px solid var(--light-color);
   color: inherit;
 }
 
-.header-navigation ul li a:active {
+.header-navigation .menu-item-link:active {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
-.header-navigation ul li.current-menu-item a,
-.header-navigation ul li.current-menu-item a:hover,
-.header-navigation ul li.current-menu-item a:active {
+.header-navigation .current-menu-item .menu-item-link,
+.header-navigation .current-menu-item .menu-item-link:hover,
+.header-navigation .current-menu-item .menu-item-link:active {
   border-bottom: 5px solid var(--light-color);
 }
 
@@ -428,13 +428,13 @@ Navigation List
 ---------------
 */
 
-.navigation-list ul {
+.navigation-list .menu {
   display: flex;
   list-style: none;
   margin: 0;
 }
 
-.navigation-list ul li a {
+.navigation-list .menu-item-link {
   box-sizing: inherit;
   color: inherit;
   display: block;
@@ -583,18 +583,18 @@ Sidebar
 
 /* Sidebar Navigation Menu */
 
-.sidebar-navigation ul {
+.sidebar-navigation .menu {
   display: flex;
   flex-flow: column nowrap;
   font-size: 1.3rem;
   padding: 0;
 }
 
-.sidebar-navigation ul li {
+.sidebar-navigation .menu-item {
   margin-bottom: 5px;
 }
 
-.sidebar-navigation ul li a {
+.sidebar-navigation .menu-item-link {
   background-color: var(--secondary-color);
   border-radius: 10px;
   box-shadow: 2px 2px 2px var(--gray-color);
@@ -603,10 +603,10 @@ Sidebar
   transition: padding-left .2s;
 }
 
-.sidebar-navigation ul li.current-menu-item a,
-.sidebar-navigation ul li a:hover,
-.sidebar-navigation ul li a:active,
-.sidebar-navigation ul li a:focus {
+.sidebar-navigation .current-menu-item .menu-item-link,
+.sidebar-navigation .menu-item-link:hover,
+.sidebar-navigation .menu-item-link:active,
+.sidebar-navigation .menu-item-link:focus {
   padding-left: calc(8% + 20px);
 }
 
@@ -750,9 +750,9 @@ Woocommerce
 .woocommerce a.button,
 .woocommerce input.button {
   background: var(--light-color);
-  border: 2px solid var(--gray-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 5px;
-  color: var(--dark-color);
+  color: var(--secondary-color);
   padding: 10px;
   text-align: center;
   transition: all .18s ease-in-out;
@@ -762,21 +762,37 @@ Woocommerce
 .woocommerce a.button:hover,
 .woocommerce input.button:focus,
 .woocommerce input.button:hover {
-  background: var(--light-color);
-  border-color: var(--secondary-color);
-  color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  outline: none;
+  outline: 0;
 }
+  
 
 .woocommerce a.button:active,
 .woocommerce input.button:active {
-  border-color: var(--secondary-color-active);
-  color: var(--secondary-color-active);
+  background-color: var(--secondary-color-active);
+  border: 2px solid var(--secondary-color-active);
+  color: var(--light-color);
+}
+
+/* Table */
+
+.woocommerce table {
+  border-color: var(--gray-color) !important;
+  border-width: 2px !important;
+}
+
+.woocommerce td,
+.woocommerce th {
+  border-top-color: var(--gray-color) !important;
+  border-top-width: 2px !important;
 }
 
 /* Checkout */
 #coupon_code.input-text {
   margin: 0 10px 10px 0;
-  min-width: 150px;
+  min-width: 135px;
 }
 
 /* Fieldset */
@@ -784,6 +800,7 @@ Woocommerce
 .woocommerce fieldset {
   border: 2px solid var(--gray-color);
   border-radius: 2px;
+  margin-bottom: 10px;
 }
 
 /* Input */
@@ -815,12 +832,23 @@ Woocommerce
 /* Info */
 
 .woocommerce-info {
+  background: var(--light-color);
   border-color: var(--tertiary-color);
   color: inherit;
 }
 
 .woocommerce-info::before {
-  color: var(--tertiary-color);
+  color: var(--tertiar-color);
+}
+
+.woocommerce-message {
+  background: var(--light-color);
+  border-color: var(--primary-color);
+  color: inherit;
+}
+
+.woocommerce-message::before {
+  color: var(--primary-color);
 }
 
 /* My Account Navigation */
@@ -886,6 +914,7 @@ Woocommerce
 }
 
 /* Select */
+
 .woocommerce select {
   background-color: var(--light-color);
   border: 2px solid var(--gray-color);
@@ -942,7 +971,7 @@ Media Queries
     width: 100%;
   }
   /* Header Navigation */
-  .header-navigation ul {
+  .header-navigation .menu {
     font-size: 1.3rem;
   }
 }
@@ -960,14 +989,14 @@ Media Queries
     width: 100%;
   }
   /* Header Navigation */
-  .header-navigation ul {
+  .header-navigation .menu {
     font-size: 1.3rem;
   }
-  .header-navigation ul li {
+  .header-navigation .menu-item {
     min-width: 80px;
   }
   /* Sidebar */
-  .sidebar-navigation ul {
+  .sidebar-navigation .menu {
     font-size: 1.2rem;
   }
   .page-sidebar {
@@ -990,16 +1019,16 @@ Media Queries
     padding: 0 10px;
     width: 100%;
   }
-  .header-navigation ul {
+  .header-navigation .header-menu {
     align-items: center;
     flex-flow: column nowrap;
     padding-left: 0;
     width: 100%;
   }
-  .header-navigation ul li {
+  .header-navigation .menu-item {
     width: 100%;
   }
-  .header-navigation ul li a {
+  .header-navigation .menu-item-link {
     border-bottom: 2px solid var(--light-color) !important;
     text-align: left;
   }
@@ -1045,5 +1074,19 @@ Media Queries
   /* Sidebar */
   .page-sidebar {
     width: 100%;
+  }
+  /* Woocommerce */
+  .woocommerce .cart .coupon {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .woocommerce .cart .coupon .button {
+    width: 60% !important;
+  }
+  #coupon_code.input-text {
+    margin: 0 0 10px 0;
+    min-width: 135px;
+    text-overflow: wrap;
   }
 }

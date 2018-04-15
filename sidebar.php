@@ -8,7 +8,10 @@
   <?php //Sidebar Navigation Menu
   if (has_nav_menu('sidebar_menu')): ?>
   <nav class="sidebar-navigation navigation-list">
-    <?php wp_nav_menu(array('theme_location'=>'sidebar_menu')); ?>
+    <?php wp_nav_menu(array(
+      'theme_location'=>'sidebar_menu',
+      'container' => ''
+      )); ?>
   </nav>
   <?php endif; ?>
   <?php //Sidebar Widget Area Bottom

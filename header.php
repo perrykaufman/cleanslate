@@ -21,7 +21,10 @@
         <span id="header-menu-label" class="header-menu-label">Menu</span>
       </a>
       <nav id="header-navigation-menu" class="header-navigation navigation-list">
-        <?php wp_nav_menu(array('theme_location' => 'header_menu')); ?>
+        <?php wp_nav_menu(array(
+          'theme_location' => 'header_menu',
+          'container' => ''
+          )); ?>
       </nav>
     </div>
   </header>

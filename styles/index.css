@@ -4,7 +4,15 @@ Fonts
 ---------------
 */
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/SourceSansPro-regular.otf') format('opentype');
+}
+
+/* Alternative font source: @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro'); */
+
 /*
 ---------------
 Colors
@@ -776,6 +784,10 @@ Woocommerce
   color: var(--light-color);
 }
 
+td .woocommerce-button.button {
+  margin-right: 2px;
+}
+
 /* Table */
 
 .woocommerce table {
@@ -792,7 +804,7 @@ Woocommerce
 /* Checkout */
 #coupon_code.input-text {
   margin: 0 10px 10px 0;
-  min-width: 135px;
+  min-width: 6.5em;
 }
 
 /* Fieldset */
@@ -838,7 +850,7 @@ Woocommerce
 }
 
 .woocommerce-info::before {
-  color: var(--tertiar-color);
+  color: var(--tertiary-color) !important;
 }
 
 .woocommerce-message {
@@ -848,7 +860,7 @@ Woocommerce
 }
 
 .woocommerce-message::before {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
 /* My Account Navigation */
@@ -869,7 +881,7 @@ Woocommerce
   display: block;
   font-size: 1.2rem;
   margin: 0 5px 5px 0;
-  padding: 2px 5px;
+  padding: 3px 10px;
   text-decoration: none;
 }
 
@@ -974,6 +986,10 @@ Media Queries
   .header-navigation .menu {
     font-size: 1.3rem;
   }
+  /* Woocommerce */
+  .woocommerce-MyAccount-navigation-link {
+    width: calc(100%/3);
+  }
 }
 
 @media all and (max-width: 1000px) {
@@ -1068,6 +1084,10 @@ Media Queries
   .footer-section {
     width: 100%;
   }
+    /* Woocommerce */
+    .woocommerce-MyAccount-navigation-link {
+      width: calc(100%/2);
+    }
 }
 
 @media all and (max-width: 400px) {
@@ -1076,6 +1096,13 @@ Media Queries
     width: 100%;
   }
   /* Woocommerce */
+  .woocommerce-MyAccount-navigation>ul {
+    align-items: flex-start;
+    flex-flow: column nowrap;
+  }
+  .woocommerce-MyAccount-navigation-link {
+    width: 100%;
+  }
   .woocommerce .cart .coupon {
     display: flex;
     flex-flow: column wrap;
@@ -1086,7 +1113,5 @@ Media Queries
   }
   #coupon_code.input-text {
     margin: 0 0 10px 0;
-    min-width: 135px;
-    text-overflow: wrap;
   }
 }

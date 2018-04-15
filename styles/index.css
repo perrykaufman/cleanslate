@@ -715,7 +715,6 @@ Woocommerce
   border-radius: 5px;
   box-shadow: 2px 2px 2px var(--gray-color);
   color: var(--light-color);
-  margin-top: 10px;
 }
 
 .woocommerce button.button:hover,
@@ -904,6 +903,10 @@ Woocommerce
 }
 
 /* Product */
+.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
+  display: block;
+}
+
 .woocommerce .single-product {
   margin-top: 10px;
 }

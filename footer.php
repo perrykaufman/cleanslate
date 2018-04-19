@@ -18,6 +18,14 @@
       <?php dynamic_sidebar('footer3'); ?>
     </section>
     <?php endif; ?>
+    <?php //Footer Bottom ?>
+    <section class="footer-bottom">
+      <?php if (is_active_sidebar('footer-bottom')):
+      dynamic_sidebar('footer-bottom');
+      endif; ?>
+      <p class="footer-bottom-text">Theme by Perry Kaufman</p>
+    </section>
+    <?php ?>
   </div>
   <?php wp_footer() ?>
 </footer>

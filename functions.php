@@ -10,6 +10,7 @@
   function init_theme_support() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
+    add_theme_support('woocommerce');
 
     //Image sizes
     add_image_size('preview-image', 600, 400, true);
@@ -73,6 +74,17 @@
       'name'=>__('Footer Area 3'),
       'id'=>'footer3',
       'description'=>__('Third widget area in footer'),
+      'before_widget'=>'',
+      'after_widget'=>'',
+      'before_title'=>'<h3>',
+      'after_title'=>'</h3>',
+    ));
+
+    //Footer Bottom Area
+    register_sidebar(array(
+      'name'=>__('Footer Bottom Area'),
+      'id'=>'footer-bottom',
+      'description'=>__('Bottom widget area for Copyright text, etc.'),
       'before_widget'=>'',
       'after_widget'=>'',
       'before_title'=>'<h3>',

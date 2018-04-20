@@ -10,7 +10,6 @@
   function init_theme_support() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    add_theme_support('woocommerce');
 
     //Image sizes
     add_image_size('preview-image', 600, 400, true);

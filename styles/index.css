@@ -568,6 +568,7 @@ Post Loop
 }
 
 .preview-post-text {
+  align-self: flex-start;
   flex: 1;
 }
 

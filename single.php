@@ -5,7 +5,9 @@
     <article>
       <?php if(has_post_thumbnail()): ?>
       <figure class="content-featured-image">
-        <?php the_post_thumbnail('page-image'); ?>
+        <?php if (in_category('products')): the_post_thumbnail('product-image');
+        else: the_post_thumbnail('page-image');
+        endif; ?>
       </figure>
       <?php endif; ?>
       <?php if (!is_front_page()): ?><h1><?php the_title(); ?></h1><?php endif; ?>

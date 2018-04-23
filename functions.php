@@ -14,6 +14,7 @@
     //Image sizes
     add_image_size('preview-image', 600, 400, true);
     add_image_size('page-image', 900, 400, true);
+    add_image_size('product-image', 600, 400, true);
 
     //Navigation menu locations
     register_nav_menus(array(
@@ -22,7 +23,7 @@
   }
   //Add support for title tag, thumbnail images, and navigation menus.
   add_action('after_setup_theme','init_theme_support');
-
+  
   function init_widgets() {
     //Sidebar Widget Area Top
     register_sidebar(array(

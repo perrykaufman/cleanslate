@@ -2,7 +2,9 @@
   <?php if(has_post_thumbnail()): ?>
   <figure class="preview-post-image">
     <a href="<?php the_permalink(); ?>">
-      <?php the_post_thumbnail('preview-image'); ?>
+      <?php if (in_category('products')): the_post_thumbnail('product-image');
+      else: the_post_thumbnail('preview-image');
+      endif; ?>
     </a>
   </figure>
   <?php endif; ?>

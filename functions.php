@@ -2,6 +2,7 @@
   function init_resources() {
     //wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_style('index', get_template_directory_uri() . '/styles/index.css');
+    wp_enqueue_style('woocommerce-override', get_template_directory_uri() . '/styles/woocommerce-override.css');
     wp_enqueue_script('index', get_template_directory_uri() . '/scripts/index.js');
   }
   //Register styles and scripts.
@@ -24,6 +25,12 @@
   //Add support for title tag, thumbnail images, and navigation menus.
   add_action('after_setup_theme','init_theme_support');
   
+  function add_woocommerce_support() {
+    add_theme_support('woocommerce');
+  }
+  //Add support for Woocommerce.
+  add_action( 'after_setup_theme', 'add_woocommerce_support' );
+
   function init_widgets() {
     //Sidebar Widget Area Top
     register_sidebar(array(

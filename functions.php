@@ -91,10 +91,10 @@
     register_sidebar(array(
       'name'=>__('Footer Bottom Area'),
       'id'=>'footer-bottom',
-      'description'=>__('Bottom widget area for Copyright text, etc.'),
+      'description'=>__('Widget area at the bottom of the footer for copyright text, etc.'),
       'before_widget'=>'',
       'after_widget'=>'',
-      'before_title'=>'<h3>',
+      'before_title'=>'<h3 style="display:none">',
       'after_title'=>'</h3>',
     ));
   }
@@ -111,6 +111,6 @@
     $atts['class'] = 'menu-item-link';
     return $atts;
   }
-
+  //Add a class of "menu-item-link" to links in Wordpress menus.
   add_filter('nav_menu_link_attributes','add_menu_item_link_class', 10, 3);
 ?>

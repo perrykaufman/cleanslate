@@ -1,9 +1,12 @@
 <?php
   function init_resources() {
-    //wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_style('index', get_template_directory_uri() . '/styles/index.css');
-    wp_enqueue_style('woocommerce-override', get_template_directory_uri() . '/styles/woocommerce-override.css');
     wp_enqueue_script('index', get_template_directory_uri() . '/scripts/index.js');
+
+    //Enqueue Woocommerce style overrides if Woocommerce plugin is activated.
+    if (class_exists('woocommerce')) {
+      wp_enqueue_style('woocommerce-override', get_template_directory_uri() . '/styles/woocommerce-override.css');
+    }
   }
   //Register styles and scripts.
   add_action('wp_enqueue_scripts', 'init_resources');
